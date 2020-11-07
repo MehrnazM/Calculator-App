@@ -25,7 +25,7 @@ function App() {
     let res
     try{
       
-      res = eval.call(null,compute)
+      res = eval(compute)
       isNaN(res) ? setResult("Error!") : setResult(res)
       toggleFinish(true)
     }
