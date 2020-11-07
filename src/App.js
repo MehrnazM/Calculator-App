@@ -25,8 +25,7 @@ function App() {
     let res
     try{
       
-      var indirectEval = eval;
-      res = indirectEval(compute)
+      res = eval.call(null,compute)
       isNaN(res) ? setResult("Error!") : setResult(res)
       toggleFinish(true)
     }
